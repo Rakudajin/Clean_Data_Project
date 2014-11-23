@@ -23,6 +23,8 @@ Averages of 66 features for each activity for each subject. List of features con
 
 Variable names represent the names of these features.
 
+
+
 <b>Steps of performed analysis</b> (also commented in the code):
 <ol>
 <li>Loading data - labels, training and test sets</li>
