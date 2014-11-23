@@ -18,6 +18,7 @@ Activity performed by the subject. Variable is a factor with the following level
 </ol>
 
 <b>Features:</b>
+
 Averages of 66 features for each activity for each subject. List of features consists of those features among provided, which represent means and standard deviations.
 
 Variable names represent the names of these features.
