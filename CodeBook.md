@@ -3,7 +3,7 @@ Variables of results:
 
 <b>Subject:</b>
 
-The number of tested subject, according to the source data
+The number of tested subject, according to the source data. Numeric from 1 to 30.
 
 <b>Activity:</b>
 
@@ -21,7 +21,7 @@ Activity performed by the subject. Variable is a factor with the following level
 
 Averages of 66 features for each activity for each subject. List of features consists of those features among provided, which represent means and standard deviations.
 
-Variable names represent the names of these features.
+Variable names represent the names of these features. Numbers are averages of normalized on [-1,1] interval features, provided by source data.
 
 <b>Steps of performed analysis</b> (also commented in the code):
 <ol>
