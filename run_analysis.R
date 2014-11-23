@@ -26,20 +26,21 @@ df = rbind(train, test)
 takes = c(1, 2, grep("mean\\(\\)", names(df)), grep("std\\(\\)", names(df)))
 df = df[, names(df) %in% names(df)[takes]]
 
-# Factor activities
-df$activity = factor(df$activity)
-levels(df$activity) = act_labs$V2
-
 # Create dataset of averages
 results = c()
 for (i in 1:30){
     for (j in 1:6){
-        temp_means = colMeans(subset(df[, 3:68], df$subject == i & as.numeric(df$activity) == j))
-        temp_row = cbind(i, levels(df$activity)[j], t(temp_means))
+        temp_means = colMeans(subset(df[, 3:68], df$subject == i & df$activity == j))
+        temp_row = cbind(i, j, t(temp_means))
         results = rbind(results, temp_row)
     }
 }
 results = as.data.frame(results)
+names(results) = names(df)
+
+# Factor activities
+results$activity = factor(results$activity)
+levels(results$activity) = act_labs$V2
 
 # Save dataset
 write.table(results, row.name=FALSE, "results.txt")
