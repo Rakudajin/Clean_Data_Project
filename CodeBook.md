@@ -1,9 +1,25 @@
 Variables of results:
 
+
+<b>Subject:</b>
+
+The number of tested subject, according to the source data
+
+<b>Activity:</b>
+
+Activity performed by the subject. Variable is a factor with the following levels:
 <ol>
-<li>Subject - the number of tested subject, according to the source data</li>
-<li>Activity - activity performed by the subject</li>
-<li>Other 66 variables - averages of a list of features for respecive subject and it's activity. List of features consists of those features among provided, which represent means and standard deviations</li>
+<li>WALKING</li>
+<li>WALKING_UPSTAIRS</li>
+<li>WALKING_DOWNSTAIRS</li>
+<li>SITTING</li>
+<li>STANDING</li>
+<li>LAYING</li>
+<ol>
+
+<b>Features:</b>
+Averages of 66 features for each activity for each subject. List of features consists of those features among provided, which represent means and standard deviations.
+<ol>
 </ol>
 
 Steps of analysis (also commented in the code):
@@ -12,6 +28,6 @@ Steps of analysis (also commented in the code):
 <li>Renaming variables, so that we can merge train and test sets</li>
 <li>Merging test and train sets</li>
 <li>Taking only features, which represent means and standard deviations of measurements</li>
-<li>Factorising and naming activities</li>
 <li>Creating dataset with averages of all features for each activity of each subject</li>
+<li>Factorising and naming activities</li>
 </ol>
